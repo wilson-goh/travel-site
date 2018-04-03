@@ -1,0 +1,14 @@
+.generic-content-container{
+  /*element under it*/
+  p {
+    line-height: 1.5; /* 1.5 is ok do not need to specify rem or any*/
+    font-size: 90%;
+    margin: 1rem 0;
+    a {
+      font-weight: 700;
+    }
+    @mixin smallScreen{
+      font-size: 125%;
+    }
+  }
+}

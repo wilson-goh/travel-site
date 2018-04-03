@@ -1,0 +1,20 @@
+.wrapper {
+  padding-left : 1.125rem ;
+  padding-right: 1.125rem ;
+  overflow: hidden;
+  max-width: 75rem ;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--medium{
+    max-width: 60rem ;
+  }
+  /*this will handle class under class offset*/
+  .wrapper{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &--b-margin{
+    margin-bottom: 3%;
+  }
+}

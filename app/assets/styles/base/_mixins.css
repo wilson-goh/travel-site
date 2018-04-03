@@ -1,0 +1,35 @@
+@define-mixin smallScreen {
+  /* Small devices (landscape phones, 576px and up)*/
+  @media (min-width: 576px) {
+    @mixin-content ;
+  }
+}
+
+@define-mixin mediumScreen {
+  /*Medium devices (tablets, 768px and up)*/
+  @media (min-width: 768px) {
+    @mixin-content ;
+  }
+}
+
+@define-mixin largeScreen {
+    /*Medium devices (tablets, 768px and up)*/
+    @media (min-width: 992px) {
+      @mixin-content ;
+    }
+}
+@define-mixin extraLargeScreen {
+    /*Medium devices (tablets, 768px and up)*/
+    @media (min-width: 1200px) {
+      @mixin-content ;
+    }
+}
+
+@define-mixin clearfix {
+  /*::after Insert some text after the content of each row*/
+  &::after{
+    content : "";/*empty content*/
+    clear: both;
+    display: block;
+  }
+}

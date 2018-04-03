@@ -1,0 +1,27 @@
+$mainBlue : #2f5572 ;
+body{
+  font-family:  "Roboto" , sans-serif;
+  color : $mainBlue ;
+/*
+  padding : 26px ;  margin : 10px ;
+  */
+  /* columns: 200px 2 ; */
+}
+img{
+  max-width: 100% ;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*generic for all a tag link is $mainOrange*/
+a {
+  color: $mainOrange ;
+  text-decoration : none;
+}
+
+a:hover {
+  color: $mainBlue ;
+}
