@@ -9,8 +9,19 @@
   @mixin mediumScreen{
     margin-bottom:  0 ;
     /*select all direct children use '>'*/
-    &--gutters > * {
+    &--gutters {
+      padding-right: -5%;
+      }
+    &--gutters > div {
         padding-right: 5%;
+        /* move   box-sizing: border-box; to global *{}*/
+        /*box-sizing: border-box;*/
+      }
+    &--gutters-larger{
+      padding-right: -15%;
+      }
+    &--gutters-larger > * {
+        padding-right: 15%;
         /* move   box-sizing: border-box; to global *{}*/
         /*box-sizing: border-box;*/
       }
@@ -22,6 +33,12 @@
     &__medium-4-larger{
       width: 37% ;
     }
+
+    &__medium-6{
+      float: left;
+      width: 50% ;
+    }
+
     &__medium-8{
       float: left;
       width: 66.66% ;

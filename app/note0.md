@@ -35,3 +35,4 @@ BEM overview
 
 Mobile first
 CSS the mobile first way approach
+-> responsive web design
