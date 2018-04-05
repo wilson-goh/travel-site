@@ -357,7 +357,7 @@ a:hover {
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 .generic-content-container p {
-      font-size: 125%
+      font-size: 110%
   }
   }
 .headline{
@@ -529,13 +529,14 @@ a:hover {
 
 
 }
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-.page-section{
-    padding: 2.5rem 0 
-
-
-}
+.page-section--no-b-padding-until-medium{
+    padding-bottom: 0 ;
+  }
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+.page-section--no-b-padding-until-medium{
+      padding-bottom: 1.25rem 
+  }
   }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
@@ -557,6 +558,23 @@ a:hover {
     background-color: #2f5572;
     color: #FFF;
   }
+.page-section--testimonials{
+    background-color: #e0e6ef;
+
+  }
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+.page-section--testimonials{
+      /* url : where is the image
+      vertical alignment : ex top
+      horizontal alignment : ex --center
+      type :  ex no-repeat  */
+      background: url('/assets/images/testimonials-bg.jpg')
+                  center center no-repeat;
+      background-size: cover/*cover the container div*/
+
+  }
+  }
 /*::after Insert some text after the content of each row*/
 .row::after{
     content : "";/*empty content*/
@@ -566,6 +584,20 @@ a:hover {
 .row__b-margin-until-small{
     margin-bottom: 1.5rem ;
   }
+.row--t-padding{
+    padding-top: 80px;
+  }
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+.row--equal-height-at-medium{
+      display: flex
+
+  }
+  }
+.row--equal-height-at-medium > * {
+      float: none;
+      display: flex ;
+    }
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 .row {
@@ -575,6 +607,7 @@ a:hover {
   @media (min-width: 768px) {
 .row {
     margin-bottom:  0 
+
     /*select all direct children use '>'*/
 
 }
@@ -586,6 +619,8 @@ a:hover {
         /* move   box-sizing: border-box; to global *{}*/
         /*box-sizing: border-box;*/
       }
+
+
     .row--gutters-larger{
       padding-right: -15%;
       }
@@ -627,6 +662,17 @@ a:hover {
 }
 .wrapper--medium{
     max-width: 60rem ;
+  }
+.wrapper--no-padding-until-medium{
+    padding-left : 0 ;
+    padding-right: 0 ;
+  }
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+.wrapper--no-padding-until-medium{
+      padding-left : 1.125rem ;
+      padding-right: 1.125rem 
+  }
   }
 /*this will handle class under class offset*/
 .wrapper .wrapper{
@@ -705,4 +751,43 @@ a:hover {
       font-size: 150%;
       text-align: left;
   }
+  }
+.testimonial{
+  /*set background */
+  background-color: rgba(255,255,255,0.7);
+  padding: 0 1.5rem 0.1rem 1.5rem;
+  margin-bottom: 120px ;
+}
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+.testimonial{
+      margin-bottom: 0
+}
+  }
+.testimonial--last{
+    margin-bottom: 0;
+  }
+/* size of photo is 160X160
+  */
+.testimonial__photo{
+    border-radius: 80px;
+    overflow: hidden ;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto -80px auto;/*move to center*/
+    position: relative;
+    top: -80px;
+    border: 6px solid  rgba(255,255,255,0.7);
+  }
+.testimonial__title{
+    color: #2f5572;
+    text-align: center ;
+    font-size: 150%;
+    margin: 0;
+  }
+.testimonial__subtitle{
+    color: #d59541;
+    text-align: center ;
+    margin: 0.5rem;
+    font-weight: 400 ;
   }

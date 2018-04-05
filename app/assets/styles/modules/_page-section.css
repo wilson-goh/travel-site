@@ -1,6 +1,10 @@
 .page-section{
-  @mixin smallScreen{
-    padding: 2.5rem 0 ;
+  padding: 1.25rem 0 ;
+  &--no-b-padding-until-medium{
+    padding-bottom: 0 ;
+    @mixin mediumScreen{
+      padding-bottom: 1.25rem ;
+    }
   }
   @mixin mediumScreen{
     padding: 3.5rem 0 ;
@@ -8,10 +12,24 @@
   @mixin largeScreen{
     padding: 4.5rem 0 ;
   }
-  padding: 1.25rem 0 ;
   &--blue {
     background-color: $mainBlue ;
     color: $mainWhite ;
+  }
+
+  &--testimonials{
+    background-color: $greyBlue ;
+    @mixin mediumScreen{
+      /* url : where is the image
+      vertical alignment : ex top
+      horizontal alignment : ex --center
+      type :  ex no-repeat  */
+      background: url('/assets/images/testimonials-bg.jpg')
+                  center center no-repeat;
+      background-size: cover;/*cover the container div*/
+
+      }
+
   }
 
 

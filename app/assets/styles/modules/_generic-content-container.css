@@ -9,7 +9,7 @@
       font-weight: 700;
     }
     @mixin smallScreen{
-      font-size: 125%;
+      font-size: 110%;
     }
   }
 }

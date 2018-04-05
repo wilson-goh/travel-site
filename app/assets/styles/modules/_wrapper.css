@@ -9,6 +9,15 @@
   &--medium{
     max-width: 60rem ;
   }
+
+  &--no-padding-until-medium{
+    padding-left : 0 ;
+    padding-right: 0 ;
+    @mixin mediumScreen{
+      padding-left : 1.125rem ;
+      padding-right: 1.125rem ;
+    }
+  }
   /*this will handle class under class offset*/
   .wrapper{
     padding-left: 0;

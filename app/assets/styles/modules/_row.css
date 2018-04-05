@@ -4,10 +4,23 @@
   &__b-margin-until-small{
     margin-bottom: 1.5rem ;
   }
+  &--t-padding{
+    padding-top: 80px;
+  }
+  &--equal-height-at-medium{
+    @mixin mediumScreen{
+      display: flex;
+    }
+    & > * {
+      float: none;
+      display: flex ;
+    }
 
+  }
   @mixin smallScreen{
   @mixin mediumScreen{
     margin-bottom:  0 ;
+
     /*select all direct children use '>'*/
     &--gutters {
       padding-right: -5%;
@@ -17,6 +30,8 @@
         /* move   box-sizing: border-box; to global *{}*/
         /*box-sizing: border-box;*/
       }
+
+
     &--gutters-larger{
       padding-right: -15%;
       }
