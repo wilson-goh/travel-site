@@ -1,0 +1,14 @@
+/* _sprite.css is auto generate from gulp svgSprite
+  only update the template if needed */
+{{#shapes}}
+  {{#first}}
+  .icon{
+    background-image : url("/assets/images/sprites/{{{sprite}}}");
+  }
+  {{/first}}
+  .icon--{{base}}{
+    width: {{ width.outer }}px;
+    height: {{ height.outer }}px;
+    background-position : {{position.relative.xy}};
+  }
+{{/shapes}}
