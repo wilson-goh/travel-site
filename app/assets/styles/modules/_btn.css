@@ -1,12 +1,12 @@
 .btn {
     background-color: $mainBlue ;
-    color: #FFF ; /* font */
+    color: $mainWhite ; /* font */
     display: inline-block;
     padding: .75rem 1.2rem ;
     text-decoration: none;
-    font-size: 0.625rem ;
+    font-size: .75rem ;
     @mixin smallScreen{
-      font-size: 0.75rem ;
+      font-size: .75rem ;
     }
     @mixin mediumScreen{
       font-size: 1rem ;

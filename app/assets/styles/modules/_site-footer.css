@@ -1,0 +1,21 @@
+.site-footer{
+  background-color: $mainBlue ;
+  color: $mainWhite;
+  font-size: 85% ;
+  text-align: center;
+  font-weight: 350 ;
+  padding:  .125rem 0 ;
+
+
+  &__text{
+    display: block;
+      margin-bottom: 0.5rem ;
+    @mixin smallScreen{
+        margin-bottom: 0rem ;
+        display: inline;
+        margin-right: 1rem ;
+
+    }
+  }
+
+}
