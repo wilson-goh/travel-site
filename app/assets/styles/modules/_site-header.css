@@ -1,0 +1,138 @@
+.site-header{
+  position :absolute;
+  width: 100%;
+  padding: 0 ;
+  z-index: 3;
+  transition: background-color .4s ease-in-out;
+
+  &--is-expanded{
+    background-color: rgba($mainBlue, .5);
+  }
+
+  @mixin smallScreen{
+    background-color: rgba($mainBlue, .4);
+    padding: 0.5rem ;
+  }
+
+  &__logo{
+    position:absolute;
+    top: 0;
+    background-color: $mainBlue;
+    padding : 1.25rem 1.75rem ;
+    left: 50%;
+    transform: translateX(-50%) scale(.8);
+    /* transform-origin : left-right top-bottom
+    0% : top
+    100% bottom
+    */
+    transform-origin: 50% 0% ; /* by default transform-origin: 50% 50% */
+    @mixin smallScreen{
+      left: auto;
+      transform: translateX(0) ;
+    }
+  }
+  &__logo-hidden-text{
+    text-indent: -666rem;
+  }
+
+  &__menu-icon{
+    width: 1.2rem ;
+    height: 1.2rem ;
+    cursor: pointer ;
+    /*background-color: transparent ;*/
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 5;
+
+    &::before{
+      content: "";
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: .2rem;
+      background-color: green;
+      transform-origin: 0 0 ;
+      transition: all .3s ease-out ;
+    }
+
+    &__middle{
+      position:absolute;
+      top: .5rem;
+      left: 0;
+      width: 100%;
+      height: .2rem;
+      background-color: white;
+      transition: all .3s ease-in-out ;
+    }
+
+    &::after{
+      content: "";
+      position:absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: .2rem;
+      background-color: red;
+      transform-origin: 100% 100% ;
+      transition: all .3s ease-in ;
+    }
+    @mixin smallScreen{
+      display: none;
+    }
+  }
+  &__menu-icon--close{
+    &::before{
+      background-color : pink ;
+      transform:rotate(90deg) scale(1);
+    }
+    .site-header__menu-icon__middle{
+      background-color : black ;
+      transform:rotate(90deg) scale(1)  translateY(2px);;
+    }
+    &::after{
+      background-color : blue ;
+      transform:rotate(90deg) scale(1) translateY(4px);
+    }
+  }
+  &__btn-container{
+    @mixin smallScreen{
+      float: right;
+    }
+  }
+
+  &__menu-content{
+    /*display: none; /*hidden by default*/
+    opacity: 0 ;
+    transform: scale(0); /*1.4);*/
+    transition: all .4s ease-out;
+    /*transition: opacity .4s ease-out; */
+    position: relative;
+    z-index: -10;
+    /*need to set the position relative in order to use z-index*/
+
+    padding-top: 6rem;
+    text-align: center;
+
+    &--is-visible{
+      /*display: block;*/
+      opacity: 1;
+        transform: scale(1);
+      z-index: 1;
+    }
+    @mixin smallScreen{
+      transform: scale(1);
+      padding-top: 0 ;
+      opacity: 1;
+      z-index: 1;
+      /*display: block; /* display only if atlease small screen*/
+    }
+  }
+
+
+}
+
+/*
+  <span class="icon icon--clear-view-escapes"></span>
+*/

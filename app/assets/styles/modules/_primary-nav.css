@@ -1,0 +1,51 @@
+
+.primary-nav{
+
+  &--pull-right{
+    @mixin smallScreen{
+      float: right;
+    }
+
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    @mixin clearfix;
+
+    li {
+        list-style: none;
+        display: inline-block;
+        padding: .9rem .4rem .9rem 0 ;
+        @mixin smallScreen{
+          padding: .9rem 1rem .9rem 0 ;
+          display: block;
+          float: left;
+        }
+    /*    margin-right: 1rem ;
+        margin-top: .5rem ;*/
+        /* background-color: green ;*/
+        /*margin: .5rem .2rem;*/
+      }
+    li:last-child{
+      padding-right: 0;
+     @mixin smallScreen{
+       padding-right: 1rem;
+     }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $mainWhite ;
+    font-weight: 350 ;
+    padding: .25rem .5rem ;
+    font-size: .75rem;
+    background-color: rgba($mainBlue, .5);
+    @mixin smallScreen{
+      /* background-color: inherit;*/
+      background-color: transparent ;
+      font-size: 1rem;
+
+    }
+  }
+}

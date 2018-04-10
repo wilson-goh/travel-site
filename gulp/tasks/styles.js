@@ -5,6 +5,7 @@ const gulp = require("gulp"),
       postcss = require("gulp-postcss"),
       nestedCss = require("postcss-nested"),
       mixinsCss = require("postcss-mixins"),
+      hexrgba = require("postcss-hexrgba"),
       varsCss = require("postcss-simple-vars");
 
 gulp.task("styles",()=>{
@@ -14,8 +15,9 @@ gulp.task("styles",()=>{
   // async function needs 'return' to be aware when it is done/completed.
   return gulp.src(src)   // importCss needs to be placed very begining
     .pipe(postcss([ importCss,
-                    mixinsCss,
                     varsCss,
+                    hexrgba,
+                    mixinsCss,
                     nestedCss,
                     autoprefixer ]))
     // eror handling, does not break the watch ...
