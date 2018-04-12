@@ -1097,3 +1097,14 @@ a:hover {
       font-size: 1rem
   }
   }
+.reveal-item{
+  opacity: 0; /*hide it */
+  -webkit-transform: scale(.5);
+          transform: scale(.5);
+  transition: all 1.5s ease-in-out ;
+}
+.reveal-item--is-visible {
+    opacity: 1 ;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
