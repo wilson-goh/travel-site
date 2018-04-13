@@ -901,11 +901,18 @@ a:hover {
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 .site-header{
+    position: fixed;
     background-color: rgba(47,85,114, .4);
     padding: 0.5rem 
 
 
 }
+  }
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+.site-header--darker{
+      background-color: rgba(23,50,72, .85)
+  }
   }
 .site-header__logo{
     position:absolute;
@@ -915,12 +922,16 @@ a:hover {
     left: 50%;
     -webkit-transform: translateX(-50%) scale(.8);
             transform: translateX(-50%) scale(.8);
+    transition:  -webkit-transform 1s ease-in-out;
+    transition:  transform 1s ease-in-out ;
+    transition:  transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
     /* transform-origin : left-right top-bottom
     0% : top
     100% bottom
     */
     -webkit-transform-origin: 50% 0% ;
             transform-origin: 50% 0% ; /* by default transform-origin: 50% 50% */
+
   }
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
@@ -928,7 +939,12 @@ a:hover {
       left: auto;
       -webkit-transform: translateX(0) ;
               transform: translateX(0) 
+
   }
+      .site-header--darker .site-header__logo{
+        -webkit-transform: scale(.63);
+                transform: scale(.63);
+      }
   }
 .site-header__logo-hidden-text{
     text-indent: -666rem;
@@ -1095,6 +1111,13 @@ a:hover {
       /* background-color: inherit;*/
       background-color: transparent ;
       font-size: 1rem
+  }
+  }
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+.primary-nav .is-current-link{
+      color: green ;
+      font-weight: 500 
   }
   }
 .reveal-item{

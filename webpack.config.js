@@ -18,7 +18,6 @@ module.exports = {
 }
 */
 /*below is the basic config for babel */
-
 const path = require("path");
 module.exports = {
   mode : "none",

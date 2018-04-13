@@ -10,8 +10,14 @@
   }
 
   @mixin smallScreen{
+    position: fixed;
     background-color: rgba($mainBlue, .4);
     padding: 0.5rem ;
+  }
+  &--darker{
+    @mixin smallScreen{
+      background-color: rgba(23,50,72, .85);
+    }
   }
 
   &__logo{
@@ -21,6 +27,7 @@
     padding : 1.25rem 1.75rem ;
     left: 50%;
     transform: translateX(-50%) scale(.8);
+    transition:  transform 1s ease-in-out ;
     /* transform-origin : left-right top-bottom
     0% : top
     100% bottom
@@ -29,7 +36,11 @@
     @mixin smallScreen{
       left: auto;
       transform: translateX(0) ;
+      .site-header--darker &{
+        transform: scale(.63);
+      }
     }
+
   }
   &__logo-hidden-text{
     text-indent: -666rem;

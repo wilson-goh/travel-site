@@ -26,9 +26,9 @@
         </div>
         <nav class = "primary-nav primary-nav--pull-right">
           <ul>
-            <li><a href="#our-beginning">Our Beginning</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#our-beginning" id="beginning-link">Our Beginning</a></li>
+            <li><a href="#features" id="feature-link" class="">Features</a></li>
+            <li><a href="#testimonials" id="testimonials-link">Testimonials</a></li>
           </ul>
         </nav>
       </div>
@@ -60,8 +60,8 @@
       </div>
     </div>
   </div>
-
-  <div id="our-beginning" class="page-section">
+<!-- create custom attribute start with data- ex: data-matching-link -->
+  <div id="our-beginning" class="page-section" data-matching-link="#beginning-link">
     <div class = "wrapper ">
         <h2 class="headline headline--center headline--b-margin-small">The first trip we planned <strong>was our own.</strong></h2>
         <h3 class="headline headline--center headline--b-margin-large headline--orange  headline--light headline--small headline--narrow">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
@@ -98,7 +98,7 @@
     </div>
   </div>
 
-  <div id="features" class="page-section page-section--blue">
+  <div id="features" class="page-section page-section--blue" data-matching-link="#feature-link">
     <div class="wrapper ">
       <h2 class="section-title">
         <span class="section-title__icon icon icon--star">
@@ -133,7 +133,7 @@
     </div>
   </div>
 
-  <div  id="testimonials"
+  <div  id="testimonials" data-matching-link="#testimonials-link"
         class="page-section
                page-section--no-b-padding-until-medium
                page-section--testimonials ">

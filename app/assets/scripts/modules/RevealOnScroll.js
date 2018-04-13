@@ -1,8 +1,7 @@
 import $ from "jquery";
 /*use viewpoint to handle scroll event*/
 import Waypoints from "./../../../../node_modules/waypoints/lib/noframework.waypoints.js";
-
-class RevealOnScroll{
+export default class RevealOnScroll{
   constructor(jquerySelectedElements, offset){
     this.itemsToReveal = jquerySelectedElements ; // $(".feature-item");
     this.offset = offset ; //    console.log("this.itemsToReveal=",this.itemsToReveal);
@@ -17,6 +16,7 @@ class RevealOnScroll{
 
   useWaypointsForScrolling(){
     var that = this;  /* this -> RevealOnScroll object */
+    /*()=>{} does not work here, use function(){}*/
      this.itemsToReveal.each(function(){    //  var thisDomElement = this ;        // console.log(this);
       new Waypoint({
         element : this,//DomElement ,
@@ -29,4 +29,4 @@ class RevealOnScroll{
       })
   }
 }
-export default RevealOnScroll ;
+// export default RevealOnScroll ;
