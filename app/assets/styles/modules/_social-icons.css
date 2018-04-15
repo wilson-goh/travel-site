@@ -1,0 +1,15 @@
+.social-icons{
+    text-align:center ;
+
+    &__icon{
+      background-color: transparent ;
+      display:inline-flex ;
+      .icon{
+        background-color: $mainOrange ;
+        display:block;
+        margin: 0 .5rem ;
+
+
+      }
+    }
+}

@@ -9,7 +9,9 @@
   &--medium{
     max-width: 60rem ;
   }
-
+  &--narrow{
+    max-width: 35rem ;
+  }
   &--no-padding-until-medium{
     padding-left : 0 ;
     padding-right: 0 ;

@@ -75,73 +75,27 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var _modules_StickyHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _modules_StickyHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _modules_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
 
 
 
 
 
-const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__["default"](),
-      featureRevealOnScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"](jquery__WEBPACK_IMPORTED_MODULE_3___default()(".feature-item"), "90%"),
-      testimonialRevealOnScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"](jquery__WEBPACK_IMPORTED_MODULE_3___default()(".testimonial"), "75%");
-const stickyHeader = new _modules_StickyHeader__WEBPACK_IMPORTED_MODULE_2__["default"]();
+
+
+const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"](),
+      featureRevealOnScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__["default"](jquery__WEBPACK_IMPORTED_MODULE_0___default()(".feature-item"), "90%"),
+      testimonialRevealOnScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__["default"](jquery__WEBPACK_IMPORTED_MODULE_0___default()(".testimonial"), "75%"),
+      stickyHeader = new _modules_StickyHeader__WEBPACK_IMPORTED_MODULE_3__["default"](),
+      modal = new _modules_Modal__WEBPACK_IMPORTED_MODULE_4__["default"]();
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
-
-// export
-class MobileMenu {
-  /*menuIcon = null;
-  menuContent = null ; */
-  constructor() {
-    // properties
-    this.siteHeader = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header");
-    this.menuIcon = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header__menu-icon");
-    this.menuContent = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header__menu-content");
-
-    // apply methods
-    this.events();
-  }
-
-  /*create the method*/
-  events() {
-    this.menuIcon.click(this.toggleTheMenu.bind(this));
-  }
-  /*
-  this keyword called by click event, therefore it is not correspond to origin object
-  this belong to click event object , it is dom object where the event fires ..
-  in order to point back to begin object  need to bind it using bind method
-  */
-  toggleTheMenu() {
-    this.menuContent.toggleClass("site-header__menu-content--is-visible");
-    this.siteHeader.toggleClass("site-header--is-expanded");
-    this.menuIcon.toggleClass("site-header__menu-icon--close");
-  }
-  /*
-    toggleTheMenu(){
-      alert("toggleTheMenu");
-    }*/
-
-}
-/* harmony default export */ __webpack_exports__["default"] = (MobileMenu);
-/*
-right way to organise code
-
-*/
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10512,13 +10466,63 @@ return jQuery;
 
 
 /***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+// export
+class MobileMenu {
+  /*menuIcon = null;
+  menuContent = null ; */
+  constructor() {
+    // properties
+    this.siteHeader = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header");
+    this.menuIcon = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header__menu-icon");
+    this.menuContent = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header__menu-content");
+
+    // apply methods
+    this.events();
+  }
+
+  /*create the method*/
+  events() {
+    this.menuIcon.click(this.toggleTheMenu.bind(this));
+  }
+  /*
+  this keyword called by click event, therefore it is not correspond to origin object
+  this belong to click event object , it is dom object where the event fires ..
+  in order to point back to begin object  need to bind it using bind method
+  */
+  toggleTheMenu() {
+    this.menuContent.toggleClass("site-header__menu-content--is-visible");
+    this.siteHeader.toggleClass("site-header--is-expanded");
+    this.menuIcon.toggleClass("site-header__menu-icon--close");
+  }
+  /*
+    toggleTheMenu(){
+      alert("toggleTheMenu");
+    }*/
+
+}
+/* harmony default export */ __webpack_exports__["default"] = (MobileMenu);
+/*
+right way to organise code
+
+*/
+
+/***/ }),
 /* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RevealOnScroll; });
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_waypoints_lib_noframework_waypoints_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 /* harmony import */ var _node_modules_waypoints_lib_noframework_waypoints_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_waypoints_lib_noframework_waypoints_js__WEBPACK_IMPORTED_MODULE_1__);
@@ -11326,7 +11330,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StickyHeader; });
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_1__);
@@ -11424,7 +11428,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 (function(factory) {
   if (true) {
     // AMD. Register as an anonymous module.
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(1)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -11770,6 +11774,60 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Modal; });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+class Modal {
+  constructor() {
+    /* modal attributes*/
+    this.document = jquery__WEBPACK_IMPORTED_MODULE_0___default()(document);
+    this.openModals = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".open-modal");
+    this.closeModals = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".modal__close");
+    this.modal = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".modal");
+
+    /*init the events*/
+    this.events();
+  }
+
+  events() {
+    //click the open modal button
+    // inside "this" is reset to bind to the click object, therefore
+    // it needs to use bind(this)
+    // to set this back to  the openModal
+    this.openModals.click(this.openModal.bind(this));
+    //click the close modal button
+    this.closeModals.click(this.closeModal.bind(this));
+    // press the esc key
+    this.document.keyup(this.keyPressHandle.bind(this));
+  }
+
+  /* modal methods*/
+  openModal() {
+    // make the modal block visible by adding modal visible css class
+    // .bind(this) to handle the right element
+    this.modal.addClass("modal--is-visible");
+    return false;
+    // treturn false will prevent the click bubble up.
+    // prevent the default behavior to happen,
+    // therefore it will not scrolling to the top.
+  }
+  closeModal() {
+    this.modal.removeClass("modal--is-visible");
+  }
+  keyPressHandle(evt) {
+    if (evt.keyCode == 27) this.closeModal();
+  }
+
+}
 
 /***/ })
 /******/ ]);

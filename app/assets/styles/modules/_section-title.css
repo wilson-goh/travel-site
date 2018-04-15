@@ -8,6 +8,10 @@
   strong {
     font-weight: 400 ;
   }
+  &--less-b-margin{
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
   &__icon {
 
     display: block;
