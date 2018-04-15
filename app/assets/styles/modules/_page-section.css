@@ -19,18 +19,19 @@
 
   &--testimonials{
     background-color: $greyBlue ;
-    @mixin mediumScreen{
-      /* url : where is the image
-      vertical alignment : ex top
-      horizontal alignment : ex --center
-      type :  ex no-repeat  */
-      background: url('/assets/images/testimonials-bg.jpg')
+    /* & .lazyloaded is diff &.lazyloaded
+    space counted*/
+    &.lazyloaded{
+      @mixin mediumScreen{
+        /* url : where is the image
+        vertical alignment : ex top
+        horizontal alignment : ex --center
+        type :  ex no-repeat  */
+        background: url('/assets/images/testimonials-bg.jpg')
                   center center no-repeat;
-      background-size: cover;/*cover the container div*/
-
+        background-size: cover;/*cover the container div*/
+        }
       }
-
-  }
-
+    }
 
 }

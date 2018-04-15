@@ -1,3 +1,27 @@
+/*below is the basic config for babel */
+const path = require("path");
+module.exports = {
+  mode : "none",
+  entry : {
+    App : "./app/assets/scripts/app.js",
+    Vendor : "./app/assets/scripts/vendor.js",
+  },
+  output : {
+    /* webpack needs to know
+    absolute path not the relative path
+    path : "./app/temp/scripts",
+    */
+    path : path.resolve(__dirname,"./app/temp/scripts"),
+    filename : "[name].js"//"App.js"
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: ["babel-loader"]
+    }]
+  }
+}
 /* typescript */
 /*
 const path = require("path");
@@ -17,28 +41,6 @@ module.exports = {
   }
 }
 */
-/*below is the basic config for babel */
-const path = require("path");
-module.exports = {
-  mode : "none",
-  entry : "./app/assets/scripts/app.js",
-  output : {
-    /* webpack needs to know
-    absolute path not the relative path
-    path : "./app/temp/scripts",
-    */
-    path : path.resolve(__dirname,"./app/temp/scripts"),
-    filename : "App.js"
-  },
-  module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: ["babel-loader"]
-    }]
-  }
-}
-
 
 /*
 const path = require("path");

@@ -11342,6 +11342,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class StickyHeader {
+
   constructor() {
     this.siteHeader = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header"); // .x class x in css
 
@@ -11354,13 +11355,21 @@ class StickyHeader {
     any element has page-section class */
     this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".page-section");
     this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".primary-nav a");
+    /*handle waypoint and lazysizes conflict*/
+    this.lazyloadImages = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lazyload");
 
     /*run the method*/
     this.useSmoothScroll();
     this.useWaypointsForFixHeader();
     this.useWayPointsForPageSection();
+    this.refreshWaypoint();
   }
-
+  /*handle waypoint and lazysizes conflict*/
+  refreshWaypoint() {
+    this.lazyloadImages.on("load", function () {
+      Waypoint.refreshAll();
+    });
+  }
   useSmoothScroll() {
     this.headerLinks.smoothScroll();
   }

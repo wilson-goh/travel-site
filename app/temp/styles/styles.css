@@ -536,7 +536,6 @@ a:hover {
 .page-section{
   padding: 1.25rem 0 ;
 
-
 }
 .page-section--no-b-padding-until-medium{
     padding-bottom: 0 ;
@@ -552,14 +551,12 @@ a:hover {
 .page-section{
     padding: 3.5rem 0 
 
-
 }
   }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 992px) {
 .page-section{
     padding: 4.5rem 0 
-
 
 }
     }
@@ -569,20 +566,20 @@ a:hover {
   }
 .page-section--testimonials{
     background-color: #e0e6ef;
-
-  }
+    }
+/* & .lazyloaded is diff &.lazyloaded
+    space counted*/
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-.page-section--testimonials{
-      /* url : where is the image
-      vertical alignment : ex top
-      horizontal alignment : ex --center
-      type :  ex no-repeat  */
-      background: url('/assets/images/testimonials-bg.jpg')
+.page-section--testimonials.lazyloaded{
+        /* url : where is the image
+        vertical alignment : ex top
+        horizontal alignment : ex --center
+        type :  ex no-repeat  */
+        background: url('/assets/images/testimonials-bg.jpg')
                   center center no-repeat;
-      background-size: cover/*cover the container div*/
-
-  }
+        background-size: cover/*cover the container div*/
+      }
   }
 /*::after Insert some text after the content of each row*/
 .row::after{

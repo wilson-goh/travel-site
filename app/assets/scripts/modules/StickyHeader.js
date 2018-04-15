@@ -4,6 +4,7 @@ import $smoothScroll from "jquery-smooth-scroll";
 import Waypoints from "./../../../../node_modules/waypoints/lib/noframework.waypoints.js";
 
 export default class StickyHeader{
+
   constructor(){
     this.siteHeader = $(".site-header"); // .x class x in css
 
@@ -16,14 +17,22 @@ export default class StickyHeader{
     any element has page-section class */
     this.pageSections = $(".page-section");
     this.headerLinks = $(".primary-nav a");
+    /*handle waypoint and lazysizes conflict*/
+    this.lazyloadImages = $(".lazyload");
 
     /*run the method*/
     this.useSmoothScroll();
     this.useWaypointsForFixHeader();
     this.useWayPointsForPageSection();
+    this.refreshWaypoint();
 
   }
-
+  /*handle waypoint and lazysizes conflict*/
+  refreshWaypoint (){
+    this.lazyloadImages.on("load",function(){
+      Waypoint.refreshAll();
+    });
+  }
   useSmoothScroll(){
     this.headerLinks.smoothScroll();
   }
