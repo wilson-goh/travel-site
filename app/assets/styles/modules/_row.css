@@ -7,7 +7,7 @@
   &--t-padding{
     padding-top: 80px;
   }
-  &--equal-height-at-medium{
+  .flexbox &--equal-height-at-medium{
     @mixin mediumScreen{
       display: flex;
     }

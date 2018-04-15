@@ -595,12 +595,12 @@ a:hover {
   }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-.row--equal-height-at-medium{
+.flexbox .row--equal-height-at-medium{
       display: flex
 
   }
   }
-.row--equal-height-at-medium > * {
+.flexbox .row--equal-height-at-medium > * {
       float: none;
       display: flex ;
     }
@@ -808,6 +808,9 @@ a:hover {
   only update the template if needed */
 .icon{
     background-image : url("/assets/images/sprites/sprite-d675eadb.svg");
+  }
+.no-svg .icon{
+    background-image : url("/assets/images/sprites/sprite-d675eadb.png");
   }
 .icon--clear-view-escapes{
     width: 142.4px;
