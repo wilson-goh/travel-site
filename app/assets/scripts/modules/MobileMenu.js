@@ -11,11 +11,11 @@ class MobileMenu{
     this.menuContent = $(".site-header__menu-content");
 
     // apply methods
-    this.events();
+    this.actions();
   }
 
   /*create the method*/
-  events(){
+  actions(){
     this.menuIcon.click(this.toggleTheMenu.bind(this));
   }
   /*

@@ -10,10 +10,10 @@ class Modal{
     this.modal = $(".modal");
 
     /*init the events*/
-    this.events();
+    this.actions();
   }
 
-  events(){
+  actions(){
     //click the open modal button
     // inside "this" is reset to bind to the click object, therefore
     // it needs to use bind(this)

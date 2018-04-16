@@ -27,7 +27,7 @@
         vertical alignment : ex top
         horizontal alignment : ex --center
         type :  ex no-repeat  */
-        background: url('/assets/images/testimonials-bg.jpg')
+        background: url('../../assets/images/testimonials-bg.jpg')
                   center center no-repeat;
         background-size: cover;/*cover the container div*/
         }
